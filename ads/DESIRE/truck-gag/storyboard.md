@@ -26,7 +26,7 @@ Made with the `storyboard-ai-ad` skill. **Reference:** the mini RC drift car ad 
 
 - **Roles:** the product is the only hero. The creator is hands and sneakers only. Nobody talks.
 
-- **Captions:** one per phase, centered white TikTok-style text with emoji. Joke → what it is → benefit → “JK we actually sell them” twist with the flavours → link and 18+.
+- **Captions:** one per phase, centered white TikTok-style text with emoji. Joke → what it is → benefit → the three flavours → “Tap Shop Now” and 18+.
 
 - **Ending:** a hard cut with no end card, so the ad loops.
 
@@ -222,7 +222,7 @@ No speaker; caption-only. Music: the track continues. Ambience: quiet late-night
 ### Clip 10
 
 **Script section / voiceover text**
-“JK we actually sell them. Cool Mint, Watermelon Ice & Mixed Berry.✌️” (on-screen caption, not spoken)
+“3 flavours: Cool Mint, Watermelon Ice & Mixed Berry.” (on-screen caption, not spoken)
 
 **Text-to-image prompt**
 A slim round matte-black metal tin about the width of a palm and two centimeters tall, with a flush pressed lid, the word DESIRE in clean white uppercase sans-serif lettering centered on the lid, a small white NICOTINE FREE line beneath the logo, and a thin mint-teal flavor ring around the lid edge. A slim round matte-black metal tin about the width of a palm and two centimeters tall, with a flush pressed lid, the word DESIRE in clean white uppercase sans-serif lettering centered on the lid, a small white NICOTINE FREE line beneath the logo, and a thin watermelon-pink flavor ring around the lid edge. A slim round matte-black metal tin about the width of a palm and two centimeters tall, with a flush pressed lid, the word DESIRE in clean white uppercase sans-serif lettering centered on the lid, a small white NICOTINE FREE line beneath the logo, and a thin deep berry-purple flavor ring around the lid edge. Low wide shot along a glossy black wood-grain desk in a dim home office at night, with an open laptop showing a blurred spreadsheet, a low-profile black keyboard, a matte black mouse, a warm brass desk lamp, and a charcoal wall: the three closed tins are mid-slide across the glossy surface from the right edge, spinning slightly like pucks. Photorealistic vertical 9:16 smartphone footage in an authentic, unpolished TikTok UGC style, natural available light, true-to-life colors, slight handheld motion, crisp focus on the subject.
@@ -239,7 +239,7 @@ No speaker; caption-only. Music: the track continues. Ambience: room tone. SFX: 
 ### Clip 11
 
 **Script section / voiceover text**
-“Check out our 🔗 18+ only.” (on-screen caption, not spoken)
+“Tap Shop Now 👇 Grab your tin. 18+ only.” (on-screen caption, not spoken)
 
 **Text-to-image prompt**
 A pair of adult hands with light-olive skin, broad knuckles, short clean nails, and a plain black analog wristwatch on the left wrist. A slim round matte-black metal tin about the width of a palm and two centimeters tall, with a flush pressed lid, the word DESIRE in clean white uppercase sans-serif lettering centered on the lid, a small white NICOTINE FREE line beneath the logo, and a thin mint-teal flavor ring around the lid edge. A slim round matte-black metal tin about the width of a palm and two centimeters tall, with a flush pressed lid, the word DESIRE in clean white uppercase sans-serif lettering centered on the lid, a small white NICOTINE FREE line beneath the logo, and a thin watermelon-pink flavor ring around the lid edge. A slim round matte-black metal tin about the width of a palm and two centimeters tall, with a flush pressed lid, the word DESIRE in clean white uppercase sans-serif lettering centered on the lid, a small white NICOTINE FREE line beneath the logo, and a thin deep berry-purple flavor ring around the lid edge. Top-down POV over a glossy black wood-grain desk in a dim home office at night, with an open laptop showing a blurred spreadsheet, a low-profile black keyboard, a matte black mouse, a warm brass desk lamp, and a charcoal wall: the three tins lined up in the middle of frame, mint-teal, watermelon-pink and berry-purple from left to right, with the hands resting at the bottom of frame. Photorealistic vertical 9:16 smartphone footage in an authentic, unpolished TikTok UGC style, natural available light, true-to-life colors, slight handheld motion, crisp focus on the subject.

@@ -1,14 +1,14 @@
 # DESIRE: “Almost took me out” caption script (9:16, ~15 s)
 
-Format copied beat for beat from the mini RC drift car reference ad (`ads/MINI-RC-DRIFT-CAR/sources/reference-ad.mp4`): a fake near-miss gag hook, the reveal on the beat drop, a quick demo, the “JK we actually sell them” twist, then the link. **Caption-only:** no voiceover, like the reference.
+Format copied beat for beat from the mini RC drift car reference ad (`ads/MINI-RC-DRIFT-CAR/sources/reference-ad.mp4`): a fake near-miss gag hook, the reveal on the beat drop, a quick demo, the three flavours, then a Shop Now call to action. **Caption-only:** no voiceover, like the reference.
 
 | # | Time | On-screen caption | What we see |
 |---|---|---|---|
 | A | 0:00–0:05 | Nicotine-free pouches almost took me out smh...💀🤦‍♂️ | A lorry with an impossibly tall box tower passes under a motorway bridge; one box flies at the filmer and lands at their feet |
 | B | 0:05–0:07.5 | Caffeine pouches. 80mg each, fast release.⚡ | On the beat drop: hands lift the Cool Mint tin from a black mailer holding all three flavours, then a hero shot |
 | C | 0:07.5–0:10 | No jitters. Helps you focus.🧠 | One-handed tin flick and pouch pick, then calm, fast typing at a late-night desk |
-| D | 0:10–0:12.5 | JK we actually sell them. Cool Mint, Watermelon Ice & Mixed Berry.✌️ | The three tins slide and spin across the desk like the RC cars' drift, landing lined up |
-| E | 0:12.5–0:15 | Check out our 🔗 18+ only. | Top-down: the Watermelon Ice tin pops open in the middle of the row; hard cut to loop |
+| D | 0:10–0:12.5 | 3 flavours: Cool Mint, Watermelon Ice & Mixed Berry. | The three tins slide and spin across the desk like the RC cars' drift, landing lined up |
+| E | 0:12.5–0:15 | Tap Shop Now 👇 Grab your tin. 18+ only. | Top-down: the Watermelon Ice tin pops open in the middle of the row; hard cut to loop |
 
 ## Claim check (your brief vs the research dossier)
 
