@@ -1,0 +1,6 @@
+# Optional helpers for the study-notes skill. Install only what you need:
+#   pip install -r .claude/skills/study-notes/scripts/requirements.txt
+python-pptx>=1.0      # extract_slides.py: .pptx text, tables, speaker notes
+pymupdf>=1.24         # extract_slides.py: .pdf text + --images page rendering
+faster-whisper>=1.0   # transcribe.py: audio/video to text (the first run downloads the model)
+# Also recommended: ffmpeg (system package) for video files; Anki (apps.ankiweb.net) for flashcards.
