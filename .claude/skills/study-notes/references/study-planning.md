@@ -7,10 +7,12 @@ This is the Cornell "review" step combined with spaced retrieval.
 | When | What | Time |
 |---|---|---|
 | Before lecture | Skim the slides and attempt the warm-up questions (pretesting) | 10 min |
-| Same day | Generate the master note from slides and transcript, and fix gaps | 20–30 min |
-| +1 day | Take the post-lecture quiz **closed-book**, then do the "Explain it back" prompts | 20 min |
+| During class | Take your own notes (encoding). For recordings, pause at section breaks to revise your notes before continuing (the pause effect) | lecture length |
+| Same day | Generate the master note. **Revise your own notes** from "What your notes missed" by adding and connecting ideas in your own words. Don't recopy. **Recite** the cue questions aloud, then do the "Explain it back" prompts | 30–40 min |
+| +1 day | Take the post-lecture quiz **closed-book**. It's the next day on purpose: scores right after studying overstate retention | 20 min |
 | Daily | Anki flashcard reviews (all courses) | 15–30 min |
-| Weekly | Cumulative interleaved quiz over *all* lectures so far; re-study only the misses | 30–45 min |
+| Weekly | **Cornell review**: about 10 min reciting the cue questions across *all* notes (recite, don't reread) | 10 min |
+| Weekly | Cumulative interleaved quiz over *all* lectures so far; re-study only the misses. Optional: compare notes with a classmate (the partner effect) | 30–45 min |
 | After problem sets / labs | Error log, plus redo any wrong problem 3 days later without looking | 15 min |
 
 ## 2. Spacing: how far apart?
@@ -35,11 +37,11 @@ Algorithm:
 1. **Rank topics**: priority = exam weight (lecture time + exam signals + syllabus objectives) × (1 − mastery). Mastery levels: `new` 0, `weak` 0.25, `shaky` 0.5, `solid` 0.8, `mastered` 1.
 2. **Schedule each topic 3 or more times** at expanding intervals (§2), with its first session as early as possible.
 3. **Interleave**: each session covers 2–4 different topics, mixing weak and solid ones.
-4. **Session structure** (50 min, then a 10 min break; Oakley's focused and diffuse modes):
-   - 5 min: blank-page recall of the topic (write everything you remember)
-   - 25 min: practice questions or problems (mixed)
-   - 10 min: check answers, then re-study *only* the misses from the notes
-   - 10 min: flashcards or error-log re-tests
+4. **Session structure** (50 min, then a 10 min break; Oakley's focused and diffuse modes). This is the Learning Scientists' combination loop, where retrieval finds the gaps and elaboration, examples and visuals repair them:
+   - 5 min: **retrieve**, a blank-page brain dump of the topic (write or sketch everything you remember, closed book)
+   - 25 min: **retrieve and interleave**, mixed practice questions or problems (switch topics, but not every minute; finish a block of 2–4 questions per topic before switching)
+   - 10 min: **check and repair** the misses. Ask why the right answer is right (elaboration), find a second example (concrete examples), and redraw the diagram from memory (dual coding)
+   - 10 min: **retrieve again**, flashcards or error-log re-tests including today's misses
 5. **Practice exams**: a full timed one 5–7 days out, and another 2–3 days out. Review each with `grade` mode and adjust the plan.
 6. **Final 24 hours**: light review of the formula sheet and error log, one short mixed quiz, a normal bedtime. Sleep consolidates memory, and an all-nighter costs more than it gains.
 7. Output a day-by-day table and put it in `_course.md` or `guides/study-plan.md`:

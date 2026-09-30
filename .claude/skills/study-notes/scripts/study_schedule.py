@@ -135,7 +135,7 @@ def main():
                 row = ("Flashcards only", "Anki reviews; re-test any error-log items due")
             else:
                 row = (", ".join(names),
-                       "Blank-page recall (5) → mixed practice Qs (25) → check + re-study misses (10) → Anki (10)")
+                       "Blank-page recall (5) → mixed practice Qs (25) → repair misses: why, example, diagram (10) → Anki (10)")
         print(f"| {d:%a %m/%d} | {args.minutes} | {row[0]} | {row[1]} | [ ] |")
     print(f"| **{exam:%a %m/%d}** | | **EXAM** | Brain dump formulas first; triage by points | |")
 

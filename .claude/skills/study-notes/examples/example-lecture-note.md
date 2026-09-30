@@ -45,7 +45,7 @@ $$v_0 = \frac{V_{max}[S]}{K_m + [S]}$$
 **Answer:** 30 µM/s (¼ of Vmax).
 **Pattern to remember:** When [S] = Km, $v_0 = ½V_{max}$. When [S] = 3·Km, $v_0 = ¾V_{max}$. When [S] ≫ Km, $v_0 → V_{max}$.
 
-**Check yourself**
+**Check yourself** *(answer aloud before opening)*
 1. Why does the velocity curve level off at high [S]?
    <details><summary>Answer</summary>
 
@@ -97,5 +97,18 @@ Enzyme-catalyzed reactions speed up with substrate concentration until the enzym
 ## Gaps and [VERIFY]
 - [ ] [VERIFY] Slide 12 labels the x-intercept as "−Km" but the transcript [19:30] says "−1/Km". The textbook (p.206) says −1/Km. Confirm with the professor.
 
+## What your notes missed
+| Missed or incorrect point | Why it matters | Source |
+|---|---|---|
+| Km does **not** change with enzyme concentration (your notes say "Km ↑ with more enzyme") | Classic trap, and the professor warned about it | [S5][09:02] |
+| Why competitive inhibition can be overcome by high [S] | Relationship question: "compare inhibitor types" is likely on the exam | [S13][24:15] |
+| The "[S] = Km gives ½Vmax" derivation | Explicit exam signal | [11:45] |
+
+**Revision task:** add each point to *your own* notes in your own words, and link it to something already there. Revise, don't recopy.
+
 ---
-*Next steps:* Take `quizzes/Q-L05.md` closed-book on 09/30. Review again on 10/06. 11 new flashcards added to the deck.
+**Next steps (Cornell cycle)**
+- [ ] **Today, recite:** cover each section, answer "Check yourself" aloud, then do "Explain it back".
+- [ ] **09/30, quiz:** `quizzes/Q-L05.md`, closed-book, confidence first.
+- [ ] **Weekly, review:** 10 min reciting cue questions across L01–L05. Next full review: 10/06.
+- [ ] 11 new flashcards added to the deck.

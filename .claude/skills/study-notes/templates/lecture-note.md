@@ -39,7 +39,7 @@ flowchart LR
 ```
 *What it shows:* … *Why it matters:* …
 
-**Check yourself**
+**Check yourself** *(answer aloud before opening)*
 1. <why/how question>
    <details><summary>Answer</summary>
 
@@ -105,5 +105,17 @@ $$ <formula> $$
 ## Gaps and [VERIFY]
 - [ ] <Unclear point → question for office hours / textbook check>
 
+## What your notes missed
+<!-- Include only if the student's own notes were provided -->
+| Missed or incorrect point | Why it matters | Source |
+|---|---|---|
+| <point absent from or wrong in your notes> | <exam signal / connects X and Y> | [S#][mm:ss] |
+
+**Revision task:** add each point to *your own* notes in your own words, and link it to something already there (an arrow, "because…", "unlike…"). Revising, not recopying, is what improves learning.
+
 ---
-*Next steps:* Take `quizzes/Q-L<NN>.md` closed-book on <date +1d>. Review again on <date +7d>. <N> new flashcards added to deck.
+**Next steps (Cornell cycle)**
+- [ ] **Today, recite:** cover each section, answer its "Check yourself" questions **aloud in your own words**, then open the answers. Then do "Explain it back".
+- [ ] **<date +1d>, quiz:** `quizzes/Q-L<NN>.md`, closed-book, rating confidence before checking.
+- [ ] **Weekly, review:** 10 min reciting cue questions across all notes. Next full review: <date +7d>.
+- [ ] <N> new flashcards added to the deck. Import `deck.tsv` into Anki.

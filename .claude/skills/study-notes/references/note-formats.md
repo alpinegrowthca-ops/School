@@ -4,13 +4,16 @@
 
 The paper Cornell layout (cue column | notes | summary) is translated into Markdown like this:
 
-| Paper Cornell | Markdown equivalent |
+| Paper Cornell (Pauk) | Markdown equivalent |
 |---|---|
-| Right column: notes | The section body: hierarchical bullets, callouts, tables, diagrams |
-| Left column: cues and questions | **Check yourself** blocks after each section, with answers hidden in `<details>` |
-| Bottom: summary | The **Summary** paragraph at the end of the note |
-| "Recite" step | The student answers the cue questions *before* opening `<details>` |
-| "Reflect" step | **Connections** and **Explain it back** sections |
+| Right column, about 6 in (**Record**) | The section body: hierarchical bullets, callouts, tables, diagrams |
+| Left cue column, about 2½ in (**Questions / Reduce**) | **Check yourself** blocks after each section: key-word cues and questions, answers hidden in `<details>` |
+| **Recite** | The student covers the notes and answers the cue questions **aloud, in their own words**, *before* opening `<details>` |
+| **Reflect** | **Connections**, **Common mistakes** and **Explain it back** sections |
+| **Review** | The weekly 10-minute recite-not-reread pass across all notes (scheduled in the Next steps block and the study plan) |
+| Bottom summary, about 2 in | The **Summary** paragraph at the end of the note |
+
+Cue questions should be answerable from the notes, and should cover *relationships* (how, why, compare) as well as facts. Revision research shows that relationship understanding is what improves most when notes are actively revised.
 
 See `templates/lecture-note.md` for the full skeleton.
 

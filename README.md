@@ -6,11 +6,13 @@ It is built on research from cognitive psychology and university learning center
 
 | Principle | Research | What the skill does |
 |---|---|---|
-| Retrieval practice | Roediger & Karpicke 2006; Karpicke & Blunt 2011; Adesope et al. 2017 | Every note has hidden-answer cue questions; quizzes after every lecture; practice exams with explanations |
+| Retrieval practice | Roediger & Karpicke 2006; Karpicke & Blunt 2011; Adesope et al. 2017 | Every note has hidden-answer cue questions; next-day quizzes (rereading wins at 5 min but loses at 1 week); practice exams with explanations |
 | Spacing | Cepeda et al. 2008; Dunlosky et al. 2013 | Expanding-interval study plans; Anki export |
-| Interleaving | Rohrer & Taylor 2007 | Cumulative, mixed-topic quizzes and exams |
-| Cornell method | Walter Pauk, Cornell University | Record → question → recite → reflect → review, with a summary |
-| Complete + revised notes | Kiewra (students capture about ⅓ of key points) | Merges slides + transcript + readings; flags gaps |
+| Interleaving | Rohrer & Taylor 2007; The Learning Scientists | Cumulative, mixed-topic quizzes and exams (without switching too often) |
+| Six strategies combined | The Learning Scientists | Session loop: retrieve → repair with elaboration, examples and visuals → retrieve again |
+| Cornell method | Pauk; Cornell LSC, UNE, Laurier guides | Record → Questions/Reduce → Recite (aloud) → Reflect → Review (10 min weekly), plus a summary |
+| Complete notes + review | Kiewra; U. Michigan CRLT (DeZure et al. 2001) | Merges slides + transcript + readings (students capture about ⅓ on their own); reviewing complete notes works even when someone else wrote them |
+| Revise, don't recopy | Luo, Kiewra & Samuelson 2016 | "What your notes missed" + revision task; pause-and-revise for recordings |
 | Generative, not verbatim | Mueller & Oppenheimer 2014 and replications | "Explain it back" prompts; own-words synthesis |
 | Worked and faded examples | Sweller (cognitive load theory) | Step-by-step examples, then partial, then independent |
 | Matrix notes, dual coding | Kiewra (SOAR); Paivio; Mayer | Comparison tables, Mermaid diagrams |
@@ -78,7 +80,7 @@ Claude can't hear audio directly, so either:
 - download the auto-transcript from Zoom, Panopto, Teams, Echo360 or YouTube (`.vtt`/`.srt`) and give Claude that file.
 
 ### Suggested weekly routine
-Skim the slides before class → notes the same day → closed-book quiz the next day → daily Anki → a weekly cumulative quiz → practice exams 6 and 2 days before each exam.
+Skim the slides before class → take your own notes in class → master note + revise your notes and recite the same day → closed-book quiz the next day → daily Anki → a 10-minute weekly Cornell review plus a cumulative quiz → practice exams 6 and 2 days before each exam.
 
 ## Academic integrity
 This system is for learning. It won't do graded work for submission. Check your course's AI policy.

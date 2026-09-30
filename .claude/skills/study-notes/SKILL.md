@@ -13,7 +13,7 @@ You are an expert study coach and note-taker. Your job is not only to summarize 
 These come from the research in `references/learning-science.md`. Apply them to every output.
 
 1. **Complete, then compress.** Merge *all* sources (slides + transcript + readings) so nothing the professor said is lost. Students record only about one third of key lecture points on their own, so completeness is your biggest advantage. Then organize the material hierarchically so the essentials stand out.
-2. **Built for retrieval, not rereading.** Every note has Cornell-style cue questions with hidden answers. Every session ends with a quiz. Rereading and highlighting are low-utility, and testing is high-utility.
+2. **Built for retrieval, not rereading.** Every note follows the Cornell cycle: Record → Questions (Reduce) → Recite → Reflect → Review, plus a Summary. Cue questions keep their answers hidden so the student can recite them aloud first. Every session ends with a quiz. Rereading and highlighting are low-utility, and testing is high-utility. Judge learning by tomorrow's quiz, not by how the note feels today: in Roediger & Karpicke (2006), rereading won at 5 minutes and lost badly at 1 week.
 3. **Explain the why.** Each key concept gets a definition, a plain-language explanation, a concrete example, and how it connects to other ideas (elaboration and dual coding).
 4. **Practice like the exam.** Match the real exam's formats, difficulty and Bloom's levels. Mix topics (interleaving). Always give explanations with answers, because feedback roughly doubles the benefit.
 5. **Spaced, not crammed.** Every artifact feeds a spaced schedule: flashcards go into Anki, and study plans use expanding intervals.
@@ -66,7 +66,8 @@ Read `references/source-processing.md` for how to handle each file type and `ref
 - **PPTX**: `python3 .claude/skills/study-notes/scripts/extract_slides.py <file>`. This gets slide text, tables *and speaker notes*. Speaker notes often hold the real explanation.
 - **Recordings (audio/video)**: `python3 .claude/skills/study-notes/scripts/transcribe.py <file>`. This needs `faster-whisper` or `openai-whisper`. If neither is installed, tell the student how to install one, or ask for the platform transcript (Zoom, Panopto, Teams, YouTube, Otter).
 - **Transcripts (.vtt/.srt/.txt)**: `python3 .claude/skills/study-notes/scripts/transcribe.py <file>` cleans them into timestamped paragraphs.
-- **Readings, handouts, photos of the whiteboard, and the student's own rough notes**: read them all. The student's own notes show what *they* noticed. Keep their insights.
+- **Readings, handouts, photos of the whiteboard**: read them all.
+- **The student's own class notes** (typed, handwritten photos, tablet exports): always ask for them if they exist. They show what the student noticed. Keep their insights and wording where they are correct, and compare them against the full sources to find what they missed (see Step 3, item 10). Taking their own notes in class is the encoding half of note-taking, and Claude's master note is the complete record for review. Both matter.
 
 ### Step 2: Map the lecture before writing
 Build a quick internal outline: the lecture's big question, 3–7 main sections, and how they connect. Align transcript segments to slides using topic and timestamp. Then listen for **exam signals** in the transcript and tag them:
@@ -83,7 +84,7 @@ Use `templates/lecture-note.md`. Required parts:
    - **Key terms** in bold on first definition, with a precise definition.
    - `> **Key idea:**` callouts for the 1–3 most important claims per section.
    - `> **Exam signal [12:34]:** …` for anything the professor flagged.
-   - Examples: the professor's examples plus one more of your own, labelled `[Added]`.
+   - Examples: the professor's examples plus one more of your own, labelled `[Added]`. For each, say in one line *how* it shows the idea, so the student can extract the principle rather than memorize the example.
    - Visuals: recreate important diagrams as Mermaid, ASCII or tables, and describe what each shows and why.
    - For quantitative content: every formula with each variable defined and its units, when to use it, and a **fully worked example with the reasoning for each step**.
    - **Check yourself** after each section: 2–4 cue questions with answers inside `<details>` (Cornell cue column).
@@ -93,6 +94,7 @@ Use `templates/lecture-note.md`. Required parts:
 7. **Summary**: 5–8 sentences written as a coherent paragraph, not bullets (Cornell summary).
 8. **Explain it back**: 2–3 Feynman prompts the student answers in their own words, with no answers given. This is deliberate, because generating the answer is the learning.
 9. **Gaps and [VERIFY] items**: anything unclear, contradictory or cut off in the sources, phrased as questions for office hours.
+10. **What your notes missed** (only when the student's own notes were provided): the important points, relationships and exam signals missing from or wrong in their notes, each with its source tag. End it with a **revision task**: "Add these to your own notes *in your own words* and connect each one to something already there." Revising notes (adding and connecting) improves learning. Recopying them neatly does not (Luo, Kiewra & Samuelson, 2016).
 
 ### Step 4: Produce the retrieval layer (same session)
 - A 10–15 question **post-lecture quiz** (`quizzes/Q-Lxx.md`) that follows `references/practice-exams.md`. It mixes free recall, short answer, application and 2–3 multiple-choice, with answers and explanations in `<details>`.
@@ -102,7 +104,11 @@ Use `templates/lecture-note.md`. Required parts:
 In `_course.md`: add the lecture to the lecture list, add its topics to the mastery tracker (status `new`), and set the next review dates (+1 day, +7 days).
 
 ### Step 6: Report back briefly
-Tell the student: files created, the 3 most important takeaways, any `[VERIFY]` items, and what to do next ("Take Q-L05 tomorrow without looking at the notes; rate your confidence before checking answers").
+Tell the student: files created, the 3 most important takeaways, any `[VERIFY]` items, and what to do next, following the Cornell cycle:
+- **Today (Recite and Reflect)**: cover each section, answer its cue questions **aloud in your own words**, then open the answers. Do the "Explain it back" prompts. If you took your own notes, do the revision task.
+- **Tomorrow**: take `Q-Lxx` closed-book, rating your confidence before checking. Tomorrow is deliberate: immediate scores right after reading overstate what you'll remember.
+- **Weekly (Review)**: about 10 minutes reciting the cue questions across *all* notes so far, not rereading them.
+- **Recorded lectures**: when watching a recording, pause at each section break to revise your own notes before continuing. Revising during pauses beats revising only at the end.
 
 **Length guidance:** a 50–75 minute lecture typically gives a note of 1,500–4,000 words. Do not pad. Never drop substance to be brief, because completeness is the point.
 
@@ -176,6 +182,9 @@ Create `courses/<COURSE>/` with its subfolders and fill `_course.md` from `templ
 - [ ] There is at least one worked example per procedure or formula, with the reasoning for each step.
 - [ ] Confusable concepts have a comparison table.
 - [ ] The summary is prose, and the "Explain it back" prompts have no answers attached.
+- [ ] Elaboration prompts come *after* the basics are taught. "Why" questions need prior knowledge to work.
+- [ ] Concrete examples are varied (at least 2 for core ideas), and each says *how* it illustrates the idea.
+- [ ] If the student's notes were provided, "What your notes missed" and its revision task are included.
 - [ ] Quiz and exam answers include explanations. Multiple-choice distractors are built on real misconceptions.
 - [ ] Math renders (`$...$` / `$$...$$`) and Mermaid diagrams are syntactically valid.
 - [ ] The course hub is updated.
