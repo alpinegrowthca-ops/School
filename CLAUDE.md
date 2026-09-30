@@ -8,6 +8,7 @@ This repository is a personal study system. Claude acts as a study coach and not
 - Each course lives in `courses/<COURSE-CODE>/`, with `_course.md` as its hub. **Read the hub first** when working on a course. It holds the exam dates and formats, exam intelligence, and the mastery tracker.
 - New course: run the skill's `setup` mode (ideally with the syllabus).
 - Raw files go in `courses/<COURSE>/sources/` (slides, recordings, transcripts, readings, past exams).
+- For **ad storyboards** (script → clip-by-clip image/video prompts, voice and sound direction), use the **`storyboard-ai-ad` skill** (`.claude/skills/storyboard-ai-ad/SKILL.md`). Ad projects live in `ads/<PRODUCT>/` with raw research in `sources/`. For DESIRE, the skill's `references/desire-product-brief.md` holds the product locks and claim guardrails.
 
 ## Standing preferences
 
