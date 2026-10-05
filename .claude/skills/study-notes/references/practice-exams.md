@@ -2,6 +2,14 @@
 
 A practice test helps most when it makes the student **retrieve and apply**, looks like the real exam, and comes with **feedback that explains**. Practice testing beats restudying across formats (g ≈ 0.51; Adesope et al., 2017), with larger gains when the final test is more than a day away. Format-matching and feedback add modest gains on top. Feedback is essential for multiple choice, because without it students can remember the wrong option they chose (Butler & Roediger, 2008).
 
+## 0. Source-lock for questions
+
+- Every question tests a concept **from the sources** (slides, transcript, provided materials), and every answer and explanation cites its source tag.
+- Application questions may use **new numbers or scenarios** to apply a principle *from the lecture*. That's practice, not new content. The principle and the solution method must come from the sources.
+- **Nothing depends on side-note content.** Don't test outside examples or analogies.
+- Distractors: prefer errors and confusions the lecture mentions (professor warnings, student questions). Otherwise use plausible wrong options, but never "teach" new facts through them.
+- Run `scripts/check_sources.py` on quiz and key files: answers inside `<details>` and key explanations must carry tags.
+
 ## 1. Build a blueprint first (for full exams)
 
 Before writing any question, fill this in (in the KEY file header):

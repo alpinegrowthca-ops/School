@@ -26,7 +26,8 @@ See `templates/lecture-note.md` for the full skeleton.
 - **One idea per bullet.**
 - **Core concepts** are taught with the Concept Ladder in `teaching-concepts.md` (why it exists → intuition → definition → how it works → examples → non-example → misconception → boundaries → check).
 - **Supporting terms** use the short form `**Term**: precise definition. *In plain words:* … *Example:* …`
-- **Source tags** at the end of the bullet or paragraph: `[S7]`, `[S7–9]`, `[14:32]`, `[R: Campbell Ch8 p.152]`, `[Added]`, `[VERIFY]`.
+- **Source tags on every content line** (see `source-lock.md` §1): `[S7]`, `[S7–S9]`, `[14:32]`, `[14:32–16:05]`, `[L04 §2]`, `[R: Campbell Ch8 p.152]` and `[H: PS3]` (only if provided), `[Board]`, `[My notes]`, `[VERIFY]`. A bold lead-in line with a tag (for example `**How it works:** [S7][09:30]`) covers the list directly under it. `[Added]` is retired: outside content goes only in side notes.
+- **Definitions keep the professor's wording.** Quote the slide when the exact wording matters for the exam.
 
 ## Callouts
 
@@ -39,9 +40,18 @@ Use blockquotes with a bold label. They render everywhere (GitHub, VS Code, Obsi
 
 > **Common mistake:** Confusing X with Y. X is about …, Y is about …
 
-> **Intuition:** A plain-language analogy or mental model, plus where the analogy breaks.
+> **Intuition (the professor's explanation):** The lecture's own plain-language explanation, rephrased clearly. [12:10]
 
-> **Misconception:** "<wrong belief>." This is wrong. It's tempting because …. Actually, …
+> **Misconception (raised in lecture):** "<wrong belief>." This is wrong. It's tempting because …. Actually, …. [S9][18:40]
+
+> 💡 **Side note (not from your lecture): analogy.** <outside analogy>. *Where it breaks:* <limit>. *Illustrates:* <concept> ([S6]).
+
+> 💡 **Side note (not from your lecture): real-world example.** <outside example you are certain is true>. *Illustrates:* <concept> ([S6]).
+```
+
+Side notes are the **only** place outside content may appear in a note: examples and analogies only, after the source content they illustrate, never used by quizzes or flashcards. The label must be exactly `> 💡 **Side note (not from your lecture)`, so `check_sources.py` can recognize it.
+
+```markdown
 
 > **[VERIFY]:** Slide 12 says 37 kJ/mol but the transcript says 30.5 kJ/mol. Check the textbook.
 ```
@@ -148,10 +158,11 @@ Tags: L05 enzymes
 4. **Cloze** is good for definitions and key sentences. Hide the *meaningful* part, not filler words.
 5. **No sets.** Instead of "List the 5 …", use cued cards ("The 3rd stage, after X, is ___") or a mnemonic card plus individual cards.
 6. **Contrastive cards for confusable pairs.** "Km vs Vmax: which does a noncompetitive inhibitor lower?"
-7. **Include "why" cards**, not just "what" cards. "Why does …?" builds understanding.
-8. **Context prefix** where it's ambiguous (for example "[Econ] Elasticity: …").
-9. **Application cards** for procedures: "Given <cue>, which method applies?"
-10. Keep the deck lean. Focus on what the exam requires, not every detail in the notes. Aim for 5–20 cards per lecture.
+7. **Source-only.** Cards come from the note's source content, never from side notes. Put the source in `Tags:` (for example `L05 S6`).
+8. **Include "why" cards**, not just "what" cards. "Why does …?" builds understanding.
+9. **Context prefix** where it's ambiguous (for example "[Econ] Elasticity: …").
+10. **Application cards** for procedures: "Given <cue>, which method applies?"
+11. Keep the deck lean. Focus on what the exam requires, not every detail in the notes. Aim for 5–20 cards per lecture.
 
 ## File naming
 

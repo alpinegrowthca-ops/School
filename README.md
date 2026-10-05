@@ -1,11 +1,12 @@
 # School: A Claude Study System
 
-A Claude Code skill that turns **lecture slides, recordings, transcripts and readings** into detailed, exam-ready notes, then builds **quizzes, full practice exams with answer keys, Anki flashcards, study guides and spaced study plans**.
+A Claude Code skill that turns **lecture slides, recordings, transcripts and readings** into detailed, exam-ready notes **built only from your own course material** (every line cites a slide or timestamp; outside examples and analogies appear only as labelled side notes), then builds **quizzes, full practice exams with answer keys, Anki flashcards, study guides and spaced study plans**.
 
 It is built on research from cognitive psychology and university learning centers. The full sources are in [`learning-science.md`](.claude/skills/study-notes/references/learning-science.md).
 
 | Principle | Research | What the skill does |
 |---|---|---|
+| Source-locked notes | Your rule | No made-up concepts or explanations; every line cites `[S#]` or `[mm:ss]`; outside examples and analogies only in 💡 side notes; gaps listed under "Not covered in this lecture"; enforced by `check_sources.py` |
 | Professor-level standard | Bransford et al. 2000 (*How People Learn*); Chi, Feltovich & Glaser 1981 | Notes built on core principles, with epistemic labels, "How do we know?" evidence, derivations, recognition cues, an examiner's view, and a 10-point Professor Review before saving |
 | Teaching concepts | Ausubel; Rawson et al. 2014; Tennyson & Cocchiarella; Guzzetti et al. 1993; Fyfe et al. 2014; Fiorella & Mayer 2013 | Concept Ladder per core concept: why → intuition → definition → how → varied examples → non-example → misconception refuted → check; Deep/Standard/Concise depth |
 | Retrieval practice | Roediger & Karpicke 2006; Karpicke & Blunt 2011; Adesope et al. 2017 | Every note has hidden-answer cue questions; next-day quizzes (rereading wins at 5 min but loses at 1 week); practice exams with explanations |
@@ -28,6 +29,7 @@ It is built on research from cognitive psychology and university learning center
 .claude/skills/study-notes/
 ├── SKILL.md                     # the skill: modes, pipeline, quality checklist
 ├── references/                  # loaded on demand
+│   ├── source-lock.md           # source rules (override everything), side notes, grounding audit
 │   ├── learning-science.md      # the research, with sources
 │   ├── expert-standard.md       # professor-level standard + Professor Review rubric
 │   ├── teaching-concepts.md     # depth levels, Concept Ladder, guided lessons
@@ -40,6 +42,7 @@ It is built on research from cognitive psychology and university learning center
 │                                # study-guide, course-hub, exam-wrapper
 ├── examples/example-lecture-note.md   # the quality bar
 └── scripts/
+    ├── check_sources.py         # grounding audit: untagged lines, [Added], side notes, slide/transcript coverage
     ├── extract_slides.py        # PPTX/PDF to Markdown (+ speaker notes, tables, page images)
     ├── transcribe.py            # audio/video to timestamped transcript (whisper); cleans .vtt/.srt
     ├── flashcards_to_anki.py    # deck.md to Anki-importable TSV (Basic + Cloze)

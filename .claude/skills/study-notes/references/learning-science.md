@@ -66,7 +66,7 @@ Dunlosky et al. judged each technique on how well it **generalizes** across four
 - Asking *why* and *how*, and explaining each step in your own words, builds connected understanding (Dunlosky et al., 2013; Chi's self-explanation research).
 - Abstract ideas stick when tied to **multiple, varied concrete examples**, and the student must extract what the examples have in common.
 
-**Implications:** every key concept in notes gets a definition, a plain-language explanation, at least one concrete example, and a "why it matters / how it connects" line.
+**Implications:** every key concept in notes gets the lecture's definition, its plain-language explanation, its concrete examples (each with how it illustrates the idea), and a "how it connects" line, all drawn from the sources. Where the lecture gives no example or analogy, a labelled side note may add one (`source-lock.md` §4).
 
 ## 5. Worked examples and cognitive load (Sweller)
 

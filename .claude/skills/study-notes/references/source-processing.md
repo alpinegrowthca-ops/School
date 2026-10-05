@@ -62,6 +62,8 @@ This strips cue numbers and duplicate caption lines and merges captions into tim
 
 ## Readings and textbooks
 
+Readings count as a source **only when the student provides them** (and `CLAUDE.md` doesn't restrict notes to slides and transcripts). Never bring in a textbook or reading the student didn't give you.
+
 - Read the chapter's headings, objectives and summary first, to get the frame.
 - Pull in: precise definitions, extra examples, and anything the lecture referenced but didn't explain. Tag it `[R: <short title> p.X]`.
 - Do not import whole chapters into lecture notes. If a reading is assigned separately, make a separate reading note (same template, with page numbers as tags).
@@ -93,6 +95,7 @@ This strips cue numbers and duplicate caption lines and merges captions into tim
 
 ## Missing sources
 
-- **Slides only**: note that spoken content is missing. Expand the bullets with `[Added]` explanations and suggest getting the recording or transcript.
-- **Recording only**: build the structure from topic shifts, and be extra careful with terminology.
-- **Just a topic** ("make notes on the Krebs cycle"): write from general knowledge and mark the whole note `Source: general knowledge. Align to your course materials.` Ask for the course materials so the notes can be matched to the professor's framing and notation.
+The source-lock (`source-lock.md`) still applies. Thin sources make shorter notes, never padded ones.
+- **Slides only**: build the note from the slides and speaker notes alone. Don't expand terse bullets with outside explanations. Put a banner at the top: `> Built from slides only. The spoken explanation is missing; add the recording or transcript for a complete note.` List the unexplained points under "Not covered in this lecture". Side notes may still add analogies or examples.
+- **Recording only**: build the structure from topic shifts, and be extra careful with terminology (no slides to check spellings against, so use `[VERIFY]` for uncertain terms).
+- **Just a topic** ("make notes on the Krebs cycle") with no course materials: **don't write a course note.** Ask for the slides or transcript. If the student explicitly wants a general explanation anyway, write it as a separate `-SUPPLEMENT.md` file headed `> ⚠️ Not from your course materials`, and never mix it into course notes, quizzes or flashcards.

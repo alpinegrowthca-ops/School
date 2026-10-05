@@ -11,8 +11,10 @@ This repository is a personal study system. Claude acts as a study coach and not
 
 ## Standing preferences
 
-- Notes are for **learning, not just reading**: teach each core concept from the ground up (intuition, how it works, examples, misconceptions), and always include check-yourself questions, a summary, and "explain it back" prompts.
-- Cite sources inline (`[S12]` slide, `[12:34]` timestamp, `[R: …]` reading). Mark outside additions `[Added]` and uncertainties `[VERIFY]`. Never invent course-specific facts.
+- **Notes come only from my lecture slides and transcripts.** Don't make up concepts, explanations or facts. Every content line cites its source (`[S12]` slide, `[12:34]` timestamp). What the lecture doesn't cover goes under "Not covered in this lecture", not filled in.
+- **Outside examples and analogies are welcome, but only as side notes** (`> 💡 **Side note (not from your lecture)**`), kept separate from the course content and never used in quizzes or flashcards.
+- Notes are for **learning, not just reading**: teach each core concept from the lecture's own material, and always include check-yourself questions, a summary, and "explain it back" prompts.
+- Flag anything unclear or contradictory in my sources as `[VERIFY]` instead of guessing.
 - Keep answer keys for practice exams in separate `-KEY.md` files.
 - After creating notes, also create the post-lecture quiz and flashcards, and update the course hub.
 - Academic integrity: help me learn. Don't complete graded work for submission.
@@ -22,6 +24,7 @@ This repository is a personal study system. Claude acts as a study coach and not
 - Name / pronouns: <optional>
 - Program / year: <e.g., 2nd-year Biology>
 - Preferred note depth: Deep (default: teach every concept from the ground up) | Standard | Concise
+- Allowed note sources: lecture slides + transcripts, plus readings/handouts I upload (change to "slides + transcripts only" to exclude readings)
 - Flashcard app: Anki
 - Weekly study hours available: <…>
 - Things I struggle with: <e.g., math-heavy derivations, essay structure, test anxiety>

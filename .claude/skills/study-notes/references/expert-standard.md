@@ -6,6 +6,8 @@ The Concept Ladder (`teaching-concepts.md`) makes notes *teach*. This standard m
 
 ---
 
+> **Source-lock comes first.** `source-lock.md` overrides this file. Professor-level quality means organizing, sharpening and examining **the lecture's own content** to an expert standard, *not* adding expert content from outside. Every hallmark below is applied using the student's slides and transcripts (and provided course materials) only. Where a hallmark needs something the sources don't give (evidence, history, an example), list it under "Not covered in this lecture". Outside examples and analogies may appear only as labelled side notes.
+
 ## 1. The eight hallmarks of professor-level notes
 
 ### H1. Organized around big ideas, not around slides
@@ -38,16 +40,16 @@ Use the labels on the claims that matter, not on every bullet.
 
 ### H4. "How do we know?": the evidence
 Professors care about *why we believe* a claim, and science and social science exams often ask about it.
-- For each major claim, a short **How do we know?** block: the key experiment, data, argument or primary source; what it showed; and its main limitation.
-- Name researchers and dates *only when the sources give them or you are certain*. Otherwise describe the evidence generically and add `[VERIFY]`. **Never invent a study, author, date, statistic or quotation.**
+- For each major claim **where the lecture or a provided reading presents evidence**, a short **How do we know?** block: the experiment, data, argument or primary source as the source describes it; what it showed; and its limitation if one is stated. Tag it.
+- If the lecture asserts a major claim without evidence, don't supply evidence from outside. List "no evidence given for X" under "Not covered in this lecture". **Never invent a study, author, date, statistic or quotation.**
 
 ### H5. Derivations, proofs and arguments, not just results
-- Show where results come from: a full derivation, or a sketch of the key steps with the *idea* behind each step.
+- Show where results come from, using the lecture's derivation or proof (all of it, with the idea behind each step as the professor explains it). If the lecture skips steps, note the skip under "Not covered in this lecture". Don't fill it in.
 - For mathematical courses, use the textbook structure of elite course notes: numbered **Definition 5.1**, **Theorem 5.2** (with hypotheses), **Proof** (or proof sketch, labelled as such), **Example**, **Remark** (subtleties, common traps, extensions).
 - For argument-based courses, give the *structure* of the argument: premises → inference → conclusion, and where critics attack it.
 
 ### H6. Context and significance
-Brief and labelled `[Added]` when it isn't from the lecture:
+Only when the lecture or provided readings give it (tagged). Otherwise leave it out:
 - **Origin**: what problem prompted the idea, and what it replaced.
 - **Significance**: why it matters in the field, and what it makes possible.
 - **Frontier**: limitations, open questions and current debates, at the course's level.
@@ -58,7 +60,7 @@ Brief and labelled `[Added]` when it isn't from the lecture:
 - At Deep depth, one **Through-line** sentence: how this lecture advances the course's overall story.
 
 ### H8. The examiner's view
-- **Professor's-eye view** section: the 3–5 questions an examiner would most likely ask about this lecture, based on learning objectives, exam signals and past exams. For each, what a **full-credit answer** must contain, and the **typical B-level answer** that loses marks (what it omits or gets imprecise).
+- **Professor's-eye view** section: the 3–5 questions an examiner would most likely ask about this lecture, based on learning objectives, exam signals and past exams. For each, what a **full-credit answer** must contain, *drawn from and tagged to the sources*. Add a "typical B-level answer" column only when the lecture or past exams show what students get wrong (professor warnings, student questions, graded past exams).
 - Distinguish what must be *memorized* (definitions, key values) from what must be *understood and applied*.
 
 ---
@@ -107,16 +109,17 @@ The student supplied these eight sources as the foundation for the skill. Each h
 - **Laundry lists**: ten facts with no organizing principle.
 - **Padding**: restating the same idea, motivational filler, generic study advice inside content notes.
 - **Flattening disagreement**: presenting a debated interpretation as settled fact.
+- **Outside content in the main text**: concepts, explanations, facts, history or examples that aren't in the slides or transcript. Outside examples and analogies belong only in labelled side notes. Everything else goes in "Not covered in this lecture".
 
 ---
 
 ## 4. The Professor Review (mandatory before saving a note)
 
-After drafting, and after the coverage and accuracy audits, re-read the whole note **as a demanding professor in this field would**. Score each criterion from 1 to 5. Anything below 4 must be revised before saving. Then re-score.
+After drafting, and after the coverage and accuracy audits, re-read the whole note **as a demanding professor in this field would**. Score each criterion from 1 to 5. Anything below 4 must be revised before saving, and **Source fidelity must be 5**. Then re-score. Depth and Synthesis may legitimately be limited by thin sources; say so instead of padding with outside material.
 
 | # | Criterion | 5 means |
 |---|---|---|
-| 1 | **Accuracy** | Nothing false. Numbers recomputed. `[Added]` claims certain or flagged `[VERIFY]` |
+| 1 | **Accuracy** | Nothing false. Numbers recomputed. Source tags verified against the actual slide or timestamp. Side-note examples certainly true |
 | 2 | **Precision** | Exact definitions, explicit assumptions, consistent notation, units, no vague verbs |
 | 3 | **Completeness** | Coverage audit passed. Every exam signal is present |
 | 4 | **Depth** | Mechanisms, derivations or arguments and evidence ("How do we know?") for every core claim |
@@ -125,13 +128,14 @@ After drafting, and after the coverage and accuracy audits, re-read the whole no
 | 7 | **Teaching clarity** | Concept Ladder complete. A student who missed the lecture could learn from it |
 | 8 | **Synthesis** | Real connections across lectures, readings and competing ideas |
 | 9 | **Exam alignment** | The Professor's-eye view matches objectives and signals. Practice reaches Apply and Analyze levels |
-| 10 | **Source fidelity** | Claims are tagged. Course framing and notation respected. Conflicts surfaced, not smoothed over |
+| 10 | **Source fidelity** *(hard gate: must be 5)* | `check_sources.py` passes. Every content line is traceable to the slides or transcript. No outside content outside side notes. Gaps listed in "Not covered". Course framing and notation respected. Conflicts surfaced, not smoothed over |
 
 Ask these red-pen questions while reviewing:
 - "Where would a professor write *'be more precise'*?"
 - "Which claim would a professor ask *'how do we know?'* about?"
 - "Which step would a strong student ask *'why?'* about?"
 - "Is anything here I'm not sure is true?" If so, verify it or flag it.
+- "Could I point to the slide or timestamp for every sentence in the main text?" If not, add the tag or delete the sentence.
 
 Report the final scores in one line when you hand the note over (for example, `Professor review: 5/5/5/4/5/5/5/4/5/5`) and name any criterion that is limited by the sources (for example, "Depth 4: the lecture gave no evidence for claim X; flagged for office hours").
 

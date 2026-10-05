@@ -4,7 +4,7 @@
 **Sources:** Slides `<file>` [S#] · Recording/transcript `<file>` [mm:ss] · Reading `<ref>` [R: …]
 **Big question:** <One sentence: what problem does this lecture answer?>
 
-**Learning objectives** (from syllabus/slides, or inferred `[Added]`)
+**Learning objectives** (from the syllabus or slides only; omit if none are given) [S2]
 - By the end, I can <verb> …
 - …
 
@@ -25,7 +25,7 @@ flowchart LR
 2. **<Concept 2>**: <one line; how it builds on 1>. *(core)*
 3. **<Concept 3>**: <one line>. *(supporting)*
 
-> **Before you start:** you need <prereq 1> (see L0X §Y) and <prereq 2>: <one-line refresher> [Added]. If either feels shaky, review it first.
+> **Before you start:** you need <prereq 1> [L0X §Y] and <prereq 2>, as recapped in lecture [01:30]. If either feels shaky, review it first.
 
 ---
 
@@ -46,8 +46,9 @@ flowchart LR
 
 **Why it exists:** <problem or question this concept answers>. [S1]
 
-**Intuition:** <plain-language explanation, no jargon>.
-*Analogy:* <analogy>. *Where it breaks:* <limit>.
+**Intuition (the professor's explanation):** <the lecture's plain-language explanation, rephrased clearly, with no new claims>. [05:10–06:20]
+
+> 💡 **Side note (not from your lecture): analogy.** <outside analogy, only if the lecture gave none>. *Where it breaks:* <limit>. *Illustrates:* <concept> ([S3]).
 
 **Definition:** **<Key term>**: <precise course definition>. [S3]
 
@@ -58,9 +59,11 @@ flowchart LR
 
 **Examples**
 - *<Professor's example>*: <…>. **Shows it because** <…>. [S4]
-- *<Different-context example>* [Added]: <…>. **Shows it because** <…>.
+- *<Another lecture example, if given>*: <…>. **Shows it because** <…>. [14:20]
 
-**Non-example:** *<near miss>*: looks like <concept> because <…>, but isn't, because <critical feature>.
+> 💡 **Side note (not from your lecture): real-world example.** <outside example, only if certain it's true>. *Illustrates:* <concept> ([S4]).
+
+**Non-example (only if the lecture gives one):** *<near miss>*: looks like <concept> because <…>, but isn't, because <critical feature>. [S5]
 
 > **Misconception:** "<common wrong belief>." This is wrong. It's tempting because <…>. Actually, <correct idea>. [S5][06:40]
 
@@ -149,6 +152,10 @@ $$ <formula> $$
 | <question> | <key points, precise terms, reasoning> | <the omission or imprecision that costs marks> |
 
 **Memorize vs understand:** memorize <definitions/values>. Understand and be able to apply <principles/methods>.
+
+## Not covered in this lecture
+*Your slides and transcript don't provide these. Side notes that help are mentioned, but they're illustrations, not course content.*
+- **<Concept>**: <no example / no analogy (see side note) / derivation step skipped / no evidence given>.
 
 ## Gaps and [VERIFY]
 - [ ] <Unclear point → question for office hours / textbook check>
