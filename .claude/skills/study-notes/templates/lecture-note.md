@@ -8,6 +8,25 @@
 - By the end, I can <verb> …
 - …
 
+**Depth:** <Deep | Standard | Concise>
+
+## Core principles
+<!-- The 1–3 deep ideas this lecture is really about, stated as claims, not topics. Link to the course's Big ideas. -->
+1. <Principle stated as a claim>. *(Course big idea: <…>)*
+2. <…>
+
+## Roadmap
+<!-- Advance organizer: the core concepts in order and how they connect -->
+```mermaid
+flowchart LR
+  A["<Concept 1>"] --> B["<Concept 2>"] --> C["<Concept 3>"]
+```
+1. **<Concept 1>**: <one line>. *(core)*
+2. **<Concept 2>**: <one line; how it builds on 1>. *(core)*
+3. **<Concept 3>**: <one line>. *(supporting)*
+
+> **Before you start:** you need <prereq 1> (see L0X §Y) and <prereq 2>: <one-line refresher> [Added]. If either feels shaky, review it first.
+
 ---
 
 ## Warm-up (attempt before reading; it's fine to guess)
@@ -21,12 +40,34 @@
 
 ---
 
-## 1. <Section title> [S1–S6]
+## 1. <Heading that states the idea, not just the topic> [S1–S6]
 
-- Main point in own words. [S2]
-  - Supporting detail. [04:12]
-  - Supporting detail.
-- **<Key term>**: precise definition. *In plain words:* … *Example:* … [S3]
+<!-- Core concept: full Concept Ladder (references/teaching-concepts.md §2). Supporting facts: definition + source tag. -->
+
+**Why it exists:** <problem or question this concept answers>. [S1]
+
+**Intuition:** <plain-language explanation, no jargon>.
+*Analogy:* <analogy>. *Where it breaks:* <limit>.
+
+**Definition:** **<Key term>**: <precise course definition>. [S3]
+
+**How it works:**
+1. <cause/step> → <effect>. [04:12]
+2. Because <…>, <…>.
+3. Therefore <…>.
+
+**Examples**
+- *<Professor's example>*: <…>. **Shows it because** <…>. [S4]
+- *<Different-context example>* [Added]: <…>. **Shows it because** <…>.
+
+**Non-example:** *<near miss>*: looks like <concept> because <…>, but isn't, because <critical feature>.
+
+> **Misconception:** "<common wrong belief>." This is wrong. It's tempting because <…>. Actually, <correct idea>. [S5][06:40]
+
+**Boundaries:** applies when <…>. Doesn't apply / changes when <…>.
+**Recognition cues:** you're looking at <concept> when <…>.
+
+> **How do we know?** <Key experiment / data / argument / primary source> showed <…>. *Limitation:* <…>. [S#] <!-- Never invent studies, names, dates or numbers; use [VERIFY] if unsure -->
 
 > **Key idea:** <most important claim in this section>
 
@@ -73,7 +114,7 @@ $$ <formula> $$
 **Answer:** …
 **Pattern to remember:** When you see <cue>, do <method>.
 
-**Check yourself**
+**Check yourself** *(answer aloud before opening)*
 1. …
 
 ---
@@ -102,6 +143,13 @@ $$ <formula> $$
 2. Why does <X> lead to <Y>? What would happen if <condition changed>?
 3. <Create/evaluate prompt: e.g., "Design a quick experiment to test …">
 
+## Professor's-eye view
+| Likely exam question | A full-credit answer must include | A typical B-level answer misses |
+|---|---|---|
+| <question> | <key points, precise terms, reasoning> | <the omission or imprecision that costs marks> |
+
+**Memorize vs understand:** memorize <definitions/values>. Understand and be able to apply <principles/methods>.
+
 ## Gaps and [VERIFY]
 - [ ] <Unclear point → question for office hours / textbook check>
 
@@ -114,6 +162,8 @@ $$ <formula> $$
 **Revision task:** add each point to *your own* notes in your own words, and link it to something already there (an arrow, "because…", "unlike…"). Revising, not recopying, is what improves learning.
 
 ---
+*Professor review:* Accuracy _ · Precision _ · Completeness _ · Depth _ · Organization _ · Conditionalized _ · Clarity _ · Synthesis _ · Exam alignment _ · Source fidelity _
+
 **Next steps (Cornell cycle)**
 - [ ] **Today, recite:** cover each section, answer its "Check yourself" questions **aloud in your own words**, then open the answers. Then do "Explain it back".
 - [ ] **<date +1d>, quiz:** `quizzes/Q-L<NN>.md`, closed-book, rating confidence before checking.

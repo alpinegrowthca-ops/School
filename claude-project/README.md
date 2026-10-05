@@ -7,6 +7,8 @@ If you study in **Claude Code**, you don't need this folder: the skill in `.clau
 1. On claude.ai, go to **Projects → Create project** (for example "BIO201 Study" or one project for all of school).
 2. Open **Set project instructions** and paste everything below the line in `PROJECT_INSTRUCTIONS.md`.
 3. Under **Project knowledge**, upload these files from `.claude/skills/study-notes/`:
+   - `references/expert-standard.md`
+   - `references/teaching-concepts.md`
    - `references/learning-science.md`
    - `references/note-formats.md`
    - `references/practice-exams.md`

@@ -6,6 +6,8 @@ It is built on research from cognitive psychology and university learning center
 
 | Principle | Research | What the skill does |
 |---|---|---|
+| Professor-level standard | Bransford et al. 2000 (*How People Learn*); Chi, Feltovich & Glaser 1981 | Notes built on core principles, with epistemic labels, "How do we know?" evidence, derivations, recognition cues, an examiner's view, and a 10-point Professor Review before saving |
+| Teaching concepts | Ausubel; Rawson et al. 2014; Tennyson & Cocchiarella; Guzzetti et al. 1993; Fyfe et al. 2014; Fiorella & Mayer 2013 | Concept Ladder per core concept: why → intuition → definition → how → varied examples → non-example → misconception refuted → check; Deep/Standard/Concise depth |
 | Retrieval practice | Roediger & Karpicke 2006; Karpicke & Blunt 2011; Adesope et al. 2017 | Every note has hidden-answer cue questions; next-day quizzes (rereading wins at 5 min but loses at 1 week); practice exams with explanations |
 | Spacing | Cepeda et al. 2008; Dunlosky et al. 2013 | Expanding-interval study plans; Anki export |
 | Interleaving | Rohrer & Taylor 2007; The Learning Scientists | Cumulative, mixed-topic quizzes and exams (without switching too often) |
@@ -27,6 +29,8 @@ It is built on research from cognitive psychology and university learning center
 ├── SKILL.md                     # the skill: modes, pipeline, quality checklist
 ├── references/                  # loaded on demand
 │   ├── learning-science.md      # the research, with sources
+│   ├── expert-standard.md       # professor-level standard + Professor Review rubric
+│   ├── teaching-concepts.md     # depth levels, Concept Ladder, guided lessons
 │   ├── source-processing.md     # slides, recordings, transcripts, readings, past exams
 │   ├── note-formats.md          # Cornell-hybrid notes, matrices, diagrams, math, flashcard rules
 │   ├── practice-exams.md        # blueprints, Bloom's, MCQ rules, keys, rubrics, grading

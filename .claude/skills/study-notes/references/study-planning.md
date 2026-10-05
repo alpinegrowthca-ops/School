@@ -17,7 +17,7 @@ This is the Cornell "review" step combined with spaced retrieval.
 
 ## 2. Spacing: how far apart?
 
-From Cepeda et al. (2008), the best gap between reviews is roughly 10–20% of the time until the test (larger for close tests, smaller for distant ones). For practical use:
+Cepeda et al. (2008) found that the best gap between reviews is about 20–40% of the time until the test when the test is a week away, shrinking to about 5–10% when it's a year away. Dunlosky et al. (2013) summarize this as roughly **10–20%** for typical course timelines. For practical use:
 
 | Days until exam | Review gaps for each topic |
 |---|---|
@@ -90,6 +90,6 @@ From Marsha Lovett's work at Carnegie Mellon. Use `templates/exam-wrapper.md`. I
 ## 7. Anxiety and wellbeing (brief, practical)
 
 - Retrieval practice under realistic conditions is itself anxiety-reducing, because the exam feels familiar.
-- Expressive writing (10 minutes writing about worries just before the exam) has been shown to reduce test anxiety.
+- **Expressive writing**: spending 10 minutes just before an exam writing about your worries improved exam scores, most of all for highly anxious students (Ramirez & Beilock, 2011, *Science*). Writing the worries down frees up working memory that anxiety would otherwise occupy.
 - Sleep, some exercise and regular meals during exam weeks are part of the plan, not optional extras.
 - If the student seems overwhelmed, help them triage to the highest-yield topics and point them to their school's academic support or counselling services.

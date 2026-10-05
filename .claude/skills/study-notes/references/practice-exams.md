@@ -1,6 +1,6 @@
 # Writing Quizzes and Practice Exams
 
-A practice test only helps if it makes the student **retrieve and apply**, looks like the real exam, and comes with **feedback that explains**. Practice tests with feedback, matched format and demanding formats give the largest effects (Adesope et al., 2017).
+A practice test helps most when it makes the student **retrieve and apply**, looks like the real exam, and comes with **feedback that explains**. Practice testing beats restudying across formats (g ≈ 0.51; Adesope et al., 2017), with larger gains when the final test is more than a day away. Format-matching and feedback add modest gains on top. Feedback is essential for multiple choice, because without it students can remember the wrong option they chose (Butler & Roediger, 2008).
 
 ## 1. Build a blueprint first (for full exams)
 
@@ -30,12 +30,13 @@ Before writing any question, fill this in (in the KEY file header):
 
 | Type | Best for | Notes |
 |---|---|---|
-| **Free recall / brain dump** | Start of any quiz. "Write everything you remember about X" | The most demanding retrieval, and the strongest learning effect |
+| **Free recall / brain dump** | Start of any quiz. "Write everything you remember about X" | The most effortful format. It shows exactly what you can't yet generate, and it trains organizing ideas the way essays and long answers require |
 | **Short answer** | Definitions with explanation, why/how questions | Answerable in 1–4 sentences, with a model answer and key points for grading |
-| **Multiple choice** | Wide coverage, discrimination between close concepts | Follow the MCQ rules below |
+| **Multiple choice** | Wide coverage, discrimination between close concepts | Follow the MCQ rules below. Well-built MCQs with competitive distractors are a strong practice format (g ≈ 0.70 in Adesope et al., 2017), and always need feedback |
 | **Multi-part problem** | Quantitative and procedural skills | Scaffold (a), (b), (c) from easier to harder. Make later parts independent of earlier numeric answers where possible, or give "if you couldn't get (a), use X" |
 | **Data / graph / case interpretation** | Application and analysis | Give a novel scenario, table or figure (described or drawn in Mermaid/ASCII) |
 | **Compare / contrast** | Confusable concepts | Often the professor's favourite essay question |
+| **Example / non-example classification** | Concept boundaries | "Is this a case of X? Why or why not?" Use near misses that lack one critical feature |
 | **Error-finding** | Misconceptions | "A student claims … Identify and correct the error" |
 | **Explain-to-a-novice** | Deep understanding | Graded on accuracy, completeness and absence of jargon |
 | **Essay** | Humanities and social sciences, synthesis | Give a rubric: thesis, evidence, analysis, counterargument, organization |

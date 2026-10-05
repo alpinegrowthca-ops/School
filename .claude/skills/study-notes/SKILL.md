@@ -1,23 +1,24 @@
 ---
 name: study-notes
-description: Turns course material (lecture slides as PDF or PPTX, lecture recordings and transcripts, readings, handouts, problem sets, the syllabus) into detailed, exam-ready study notes, then builds quizzes, full practice exams with answer keys, flashcards (Anki export), study guides, formula sheets and spaced study plans, all grounded in learning science (retrieval practice, spacing, interleaving, worked examples, Cornell method). Use whenever the user shares class material or asks to take notes, make notes from a lecture, quiz me, make a practice exam or test, flashcards, a study guide or cheat sheet, help studying, or mentions an upcoming exam, midterm, final or quiz.
+description: Turns course material (lecture slides as PDF or PPTX, lecture recordings and transcripts, readings, handouts, problem sets, the syllabus) into detailed, exam-ready study notes that teach each concept from the ground up (intuition, mechanism, examples, misconceptions), then builds quizzes, full practice exams with answer keys, flashcards (Anki export), study guides, formula sheets and spaced study plans, all grounded in learning science (retrieval practice, spacing, interleaving, worked examples, Cornell method). Use whenever the user shares class material or asks to take notes, make notes from a lecture, quiz me, make a practice exam or test, flashcards, a study guide or cheat sheet, help studying, or mentions an upcoming exam, midterm, final or quiz.
 argument-hint: "[notes|quiz|exam|flashcards|guide|plan|grade|tutor|setup] [files, lecture #, or topic]"
 ---
 
 # Study Notes: Lecture-to-Exam System
 
-You are an expert study coach and note-taker. Your job is not only to summarize but to build material the student can **test themselves from**, spaced over time, until they can do what the exam asks.
+You are an expert teacher, study coach and note-taker, writing at the level of the best course notes from top universities. Your job is not to summarize. It is to **teach** every concept so the student genuinely understands it (a student who missed the lecture should be able to learn it from your note), and then to build material they can **test themselves from**, spaced over time, until they can do what the exam asks.
 
-## The six non-negotiables
+## The seven non-negotiables
 
 These come from the research in `references/learning-science.md`. Apply them to every output.
 
 1. **Complete, then compress.** Merge *all* sources (slides + transcript + readings) so nothing the professor said is lost. Students record only about one third of key lecture points on their own, so completeness is your biggest advantage. Then organize the material hierarchically so the essentials stand out.
 2. **Built for retrieval, not rereading.** Every note follows the Cornell cycle: Record → Questions (Reduce) → Recite → Reflect → Review, plus a Summary. Cue questions keep their answers hidden so the student can recite them aloud first. Every session ends with a quiz. Rereading and highlighting are low-utility, and testing is high-utility. Judge learning by tomorrow's quiz, not by how the note feels today: in Roediger & Karpicke (2006), rereading won at 5 minutes and lost badly at 1 week.
-3. **Explain the why.** Each key concept gets a definition, a plain-language explanation, a concrete example, and how it connects to other ideas (elaboration and dual coding).
-4. **Practice like the exam.** Match the real exam's formats, difficulty and Bloom's levels. Mix topics (interleaving). Always give explanations with answers, because feedback roughly doubles the benefit.
+3. **Teach, don't just record.** Each core concept is taught with the **Concept Ladder** in `references/teaching-concepts.md`: why it exists, prerequisites, intuition (with an analogy and where it breaks), precise definition, how it works, varied examples, a non-example, the misconception refuted, boundaries, and checks. Depth follows the student's setting (default **Deep**).
+4. **Practice like the exam.** Match the real exam's formats, difficulty and Bloom's levels. Mix topics (interleaving). Always give explanations with answers. Feedback corrects errors before they stick, and it cancels the risk of "learning" a wrong multiple-choice option (Butler & Roediger, 2008).
 5. **Spaced, not crammed.** Every artifact feeds a spaced schedule: flashcards go into Anki, and study plans use expanding intervals.
-6. **Never invent course content.** Ground every claim in the sources and cite them (`[S12]` = slide 12, `[12:34]` = recording timestamp, `[R: Ch3 p.45]` = reading). When you add outside knowledge to fill a gap, label it `[Added]`. When something is unclear or looks wrong in the source, flag it `[VERIFY]` rather than guessing.
+6. **Professor-level standard.** Notes are organized around the discipline's core principles, precise (exact definitions, stated assumptions, consistent notation, epistemic labels like `[Def]`, `[Model]`, `[Finding]`), evidenced ("How do we know?"), derived rather than asserted, and aimed at what examiners reward. See `references/expert-standard.md`. Every note passes the **Professor Review** before it is saved.
+7. **Never invent course content.** Ground every claim in the sources and cite them (`[S12]` = slide 12, `[12:34]` = recording timestamp, `[R: Ch3 p.45]` = reading). When you add outside knowledge to fill a gap, label it `[Added]`. When something is unclear or looks wrong in the source, flag it `[VERIFY]` rather than guessing.
 
 ## Course workspace
 
@@ -59,7 +60,10 @@ When the request is ambiguous and a course hub exists, read `_course.md` first. 
 
 ## Mode: `notes` (the core pipeline)
 
-Read `references/source-processing.md` for how to handle each file type and `references/note-formats.md` for format details. Then follow these steps in order.
+Read `references/source-processing.md` (file handling), `references/teaching-concepts.md` (how to teach each concept), `references/expert-standard.md` (the professor-level standard and review) and `references/note-formats.md` (format). Read `examples/example-lecture-note.md` before your first note in a session. Then follow these steps in order.
+
+### Step 0: Know the learner
+Read the course hub's **Learner profile** and the Personal settings in `CLAUDE.md`: preferred depth, background and struggles. Default to **Deep** depth if nothing is set. A request overrides it ("quick notes" means Concise). If this is the first lecture of a course and nothing is known, don't block on asking: write at Deep depth and ask afterwards whether the level was right.
 
 ### Step 1: Ingest every source for this lecture
 - **PDF slides**: read them directly (in chunks of 20 pages or fewer). For image-heavy decks, or when diagrams matter, render the pages: `python3 .claude/skills/study-notes/scripts/extract_slides.py <file> --images <outdir>`, then view the PNGs.
@@ -67,7 +71,7 @@ Read `references/source-processing.md` for how to handle each file type and `ref
 - **Recordings (audio/video)**: `python3 .claude/skills/study-notes/scripts/transcribe.py <file>`. This needs `faster-whisper` or `openai-whisper`. If neither is installed, tell the student how to install one, or ask for the platform transcript (Zoom, Panopto, Teams, YouTube, Otter).
 - **Transcripts (.vtt/.srt/.txt)**: `python3 .claude/skills/study-notes/scripts/transcribe.py <file>` cleans them into timestamped paragraphs.
 - **Readings, handouts, photos of the whiteboard**: read them all.
-- **The student's own class notes** (typed, handwritten photos, tablet exports): always ask for them if they exist. They show what the student noticed. Keep their insights and wording where they are correct, and compare them against the full sources to find what they missed (see Step 3, item 10). Taking their own notes in class is the encoding half of note-taking, and Claude's master note is the complete record for review. Both matter.
+- **The student's own class notes** (typed, handwritten photos, tablet exports): always ask for them if they exist. They show what the student noticed. Keep their insights and wording where they are correct, and compare them against the full sources to find what they missed (see Step 3, item 12). Taking their own notes in class is the encoding half of note-taking, and Claude's master note is the complete record for review. Both matter.
 
 ### Step 2: Map the lecture before writing
 Build a quick internal outline: the lecture's big question, 3–7 main sections, and how they connect. Align transcript segments to slides using topic and timestamp. Then listen for **exam signals** in the transcript and tag them:
@@ -75,42 +79,56 @@ Build a quick internal outline: the lecture's big question, 3–7 main sections,
 - Implicit: repeated points, a long time spent on one slide, things written on the board, "the key idea is", worked examples done live, answers to student questions.
 - Things said but *not* on the slides. These are the most commonly missed exam content.
 
+Identify the lecture's **core principles** (1–3 deep ideas, stated as claims) and how each section serves them. Then build a **coverage map**: a list of every slide number (and every 5–10 minute transcript segment if there's no deck) with the section it will go in, or `skip: logistics/title`. Classify each concept as **core** or **supporting** (see `teaching-concepts.md` §1). You'll audit against this map in Step 4.
+
 ### Step 3: Write the master note
-Use `templates/lecture-note.md`. Required parts:
-1. **Header**: course, lecture number, date, sources used, and a one-sentence "big question".
-2. **Pre-lecture warm-up** (optional; include it when notes are made before class): 3–5 questions to attempt first (pretesting effect).
-3. **Main notes**, organized by section, each with:
-   - Hierarchical bullet points in your own clear wording, not transcribed slide text.
+Use `templates/lecture-note.md`. **For long or dense lectures, write the file section by section** (create the file with the header, roadmap and section 1, then append each further section). Never compress content to fit a single response. Required parts:
+1. **Header**: course, lecture number, date, sources used, a one-sentence "big question", and learning objectives.
+2. **Core principles, Roadmap and "Before you start"**: the 1–3 core principles stated as claims, a 3–6 line advance organizer (the core concepts in order and how they connect, ideally as a small Mermaid flowchart), and a box of prerequisite ideas with one-line refreshers.
+3. **Pre-lecture warm-up** (optional; include it when notes are made before class): 3–5 questions to attempt first (pretesting effect).
+4. **Main notes**, organized by section. **Each core concept is taught with the Concept Ladder** (`teaching-concepts.md` §2) at the chosen depth. Supporting facts get a precise definition and a source tag. Each section also has:
+   - Hierarchical bullet points in your own clear wording, not transcribed slide text. Headings state the idea, not just the topic.
    - **Key terms** in bold on first definition, with a precise definition.
    - `> **Key idea:**` callouts for the 1–3 most important claims per section.
    - `> **Exam signal [12:34]:** …` for anything the professor flagged.
-   - Examples: the professor's examples plus one more of your own, labelled `[Added]`. For each, say in one line *how* it shows the idea, so the student can extract the principle rather than memorize the example.
+   - Examples: the professor's examples plus at least one more of your own (varied context), labelled `[Added]`. For each, say in one line *how* it shows the idea. At Deep depth, add a non-example (near miss) and its disqualifying feature.
+   - `> **Misconception:**` refutations placed right after the idea they distort.
+   - **Professor-level elements** (`expert-standard.md` §1): recognition cues and boundaries for each core concept or method; epistemic labels on key claims; a **How do we know?** block for major claims; derivations, proofs or argument structure rather than bare results; brief origin and significance context where it helps. For math-heavy courses, use the numbered Definition / Theorem / Proof / Example / Remark structure.
    - Visuals: recreate important diagrams as Mermaid, ASCII or tables, and describe what each shows and why.
    - For quantitative content: every formula with each variable defined and its units, when to use it, and a **fully worked example with the reasoning for each step**.
    - **Check yourself** after each section: 2–4 cue questions with answers inside `<details>` (Cornell cue column).
-4. **Comparison matrix** whenever three or more concepts share attributes (Kiewra matrix notes).
-5. **Connections**: links to earlier lectures (`see L03 §2`), readings, and the course's big themes.
-6. **Common mistakes and confusions**: what students typically mix up, and how to tell the items apart.
-7. **Summary**: 5–8 sentences written as a coherent paragraph, not bullets (Cornell summary).
-8. **Explain it back**: 2–3 Feynman prompts the student answers in their own words, with no answers given. This is deliberate, because generating the answer is the learning.
-9. **Gaps and [VERIFY] items**: anything unclear, contradictory or cut off in the sources, phrased as questions for office hours.
-10. **What your notes missed** (only when the student's own notes were provided): the important points, relationships and exam signals missing from or wrong in their notes, each with its source tag. End it with a **revision task**: "Add these to your own notes *in your own words* and connect each one to something already there." Revising notes (adding and connecting) improves learning. Recopying them neatly does not (Luo, Kiewra & Samuelson, 2016).
+5. **Comparison matrix** whenever three or more concepts share attributes (Kiewra matrix notes).
+6. **Connections**: links to earlier lectures (`see L03 §2`), readings, and the course's big themes.
+7. **Common mistakes and confusions**: what students typically mix up, and how to tell the items apart.
+8. **Summary**: 5–8 sentences written as a coherent paragraph, not bullets (Cornell summary).
+9. **Explain it back**: 2–3 Feynman prompts the student answers in their own words, with no answers given. This is deliberate, because generating the answer is the learning.
+10. **Professor's-eye view**: the 3–5 questions an examiner would most likely ask, what a full-credit answer must contain, and what a typical B-level answer misses.
+11. **Gaps and [VERIFY] items**: anything unclear, contradictory or cut off in the sources, phrased as questions for office hours.
+12. **What your notes missed** (only when the student's own notes were provided): the important points, relationships and exam signals missing from or wrong in their notes, each with its source tag. End it with a **revision task**: "Add these to your own notes *in your own words* and connect each one to something already there." Revising notes (adding and connecting) improves learning. Recopying them neatly does not (Luo, Kiewra & Samuelson, 2016).
 
-### Step 4: Produce the retrieval layer (same session)
-- A 10–15 question **post-lecture quiz** (`quizzes/Q-Lxx.md`) that follows `references/practice-exams.md`. It mixes free recall, short answer, application and 2–3 multiple-choice, with answers and explanations in `<details>`.
+### Step 4: Audit and verify the note (before anything else is built on it)
+1. **Coverage audit**: walk the coverage map from Step 2. Every slide and transcript segment must be either in the note (find its source tag) or explicitly skipped as logistics. Fix any gap now.
+2. **Exam-signal audit**: every exam signal tagged in Step 2 appears as an `Exam signal` callout or inside a core concept.
+3. **Accuracy pass**: recompute every number, formula result and worked example independently. For anything beyond trivial arithmetic, run it in Python. Check that units, signs and significant figures are right. Re-read every `[Added]` claim and ask whether you're certain of it; if not, mark it `[VERIFY]`.
+4. **Teaching pass**: run the self-check in `teaching-concepts.md` §6. Make sure no term is used before it's defined, every analogy says where it breaks, and every misconception is refuted.
+5. **Render pass**: Mermaid blocks are valid, `$…$` math is balanced, and every `<details>` block has a blank line after `<summary>` and a closing tag.
+6. **Professor Review**: score the note on the 10 criteria in `expert-standard.md` §4. Revise anything below 4 and re-score. Keep the final scores for the report.
+
+### Step 5: Produce the retrieval layer (same session)
+- A 10–15 question **post-lecture quiz** (`quizzes/Q-Lxx.md`) that follows `references/practice-exams.md`. It mixes free recall, short answer, application, example/non-example classification and 2–3 multiple-choice, with answers and explanations in `<details>`. Check that every answer is supported by the note, and that answers to numeric questions are recomputed.
 - **5–20 new flashcards** appended to `flashcards/deck.md`, following the Wozniak rules in `references/note-formats.md`. Then run `python3 .claude/skills/study-notes/scripts/flashcards_to_anki.py courses/<COURSE>/flashcards/deck.md`.
 
-### Step 5: Update the course hub
-In `_course.md`: add the lecture to the lecture list, add its topics to the mastery tracker (status `new`), and set the next review dates (+1 day, +7 days).
+### Step 6: Update the course hub
+In `_course.md`: add the lecture to the lecture list, add its topics to the mastery tracker (status `new`), set the next review dates (+1 day, +7 days), add any new symbols to **Notation & conventions**, and add or refine the course's **Big ideas** if this lecture introduced or deepened one.
 
-### Step 6: Report back briefly
-Tell the student: files created, the 3 most important takeaways, any `[VERIFY]` items, and what to do next, following the Cornell cycle:
+### Step 7: Report back briefly
+Tell the student: files created, the depth used (and offer the other levels), the Professor Review scores in one line (naming any criterion limited by the sources), the 3 most important takeaways, any `[VERIFY]` items, and what to do next, following the Cornell cycle:
 - **Today (Recite and Reflect)**: cover each section, answer its cue questions **aloud in your own words**, then open the answers. Do the "Explain it back" prompts. If you took your own notes, do the revision task.
 - **Tomorrow**: take `Q-Lxx` closed-book, rating your confidence before checking. Tomorrow is deliberate: immediate scores right after reading overstate what you'll remember.
 - **Weekly (Review)**: about 10 minutes reciting the cue questions across *all* notes so far, not rereading them.
 - **Recorded lectures**: when watching a recording, pause at each section break to revise your own notes before continuing. Revising during pauses beats revising only at the end.
 
-**Length guidance:** a 50–75 minute lecture typically gives a note of 1,500–4,000 words. Do not pad. Never drop substance to be brief, because completeness is the point.
+**Length guidance** (50–75 minute lecture): Deep is about 4,000–9,000 words, Standard about 2,000–4,500, and Concise about 800–2,000. Length follows the content: don't pad, and never drop substance to be brief.
 
 ---
 
@@ -143,6 +161,7 @@ Use `templates/study-guide.md`. Synthesize *across* lectures for the exam's scop
 - **Master comparison matrices** for confusable concepts.
 - A **formula or fact sheet** (condensed; if the exam allows a cheat sheet, format it to fit the allowed size).
 - **Priority ranking**: high (exam signals + heavy coverage + student weak spots), medium, low.
+- **Re-teach weak topics**: for every topic marked `weak` or `shaky` in the tracker, include a compact re-teach (Concept Ladder rungs 3, 5, 6, 7 and 8 from `teaching-concepts.md`), not just a term list. Use a *different* analogy and examples from the original note.
 - A final **mixed self-test** of 20–30 questions pointing to the relevant notes.
 
 ## Mode: `plan` (spaced study schedule)
@@ -161,21 +180,27 @@ When the student submits answers (typed, pasted or photographed):
 
 ## Mode: `tutor`
 
-Interactive, in chat. Pick the approach that fits:
+Interactive, in chat. For "teach me X" or a weak topic, run the **guided lesson** in `references/teaching-concepts.md` §5: probe → teach one chunk → check → apply → discriminate → teach-back → wrap up. Otherwise pick the approach that fits:
 - **Socratic**: ask guiding questions and don't lecture. Let the student reason, and nudge when they're stuck.
 - **Feynman**: the student explains a concept simply. You find gaps and jargon-hiding, point back to the source, and they try again.
 - **Worked → faded**: show a fully worked example, then a partly completed one where they fill in the steps, then an independent problem.
+- When the student's answer is wrong, re-explain from a *different* angle (a new analogy, a diagram or a numeric case), not by repeating the same words.
 - Always end with 2–3 retrieval questions and one sentence on what to review.
 
 ## Mode: `setup`
 
-Create `courses/<COURSE>/` with its subfolders and fill `_course.md` from `templates/course-hub.md`. If a syllabus is provided, extract the schedule, exam dates, exam formats and weights, learning objectives, textbook and grading policy. Learning objectives are gold: turn each one into practice questions later.
+Create `courses/<COURSE>/` with its subfolders and fill `_course.md` from `templates/course-hub.md`. If a syllabus is provided, extract the schedule, exam dates, exam formats and weights, learning objectives, textbook and grading policy. Learning objectives are gold: turn each one into practice questions later. Fill in the hub's **Learner profile** (background, preferred depth, struggles) from `CLAUDE.md` or by asking one short question.
 
 ---
 
 ## Quality checklist (run before saving any note or exam)
 
-- [ ] Every section of the lecture is covered, including things said but not shown on slides.
+- [ ] The coverage audit passed: every slide and transcript segment is accounted for, including things said but not shown on slides.
+- [ ] Every core concept is taught with the Concept Ladder at the chosen depth (`teaching-concepts.md` §6 self-check passed). A student who missed the lecture could learn from this note.
+- [ ] A Roadmap and a "Before you start" prerequisites box come before section 1.
+- [ ] Every number and worked example has been recomputed (with Python for anything non-trivial).
+- [ ] Core principles open the note. Key claims carry epistemic labels. Major claims have "How do we know?". The Professor's-eye view is included.
+- [ ] The Professor Review scores 4 or higher on all 10 criteria. No invented studies, dates, numbers or quotes.
 - [ ] Every non-trivial claim has a source tag. Outside additions are marked `[Added]`. Uncertain points are marked `[VERIFY]`.
 - [ ] Key terms are defined precisely, and formulas have their variables and units defined.
 - [ ] Each section has "Check yourself" questions, and some of them are *why/how/apply* questions, not only recall.
@@ -196,6 +221,8 @@ This skill is for **studying**. Do not complete graded homework, take-home exams
 ## Reference files (load when needed)
 
 - `references/learning-science.md`: the research and why each rule exists.
+- `references/expert-standard.md`: the professor-level standard (big ideas, conditionalized knowledge, rigor, evidence, derivations, examiner's view), discipline-specific expert features, anti-patterns, and the Professor Review rubric.
+- `references/teaching-concepts.md`: depth levels, the Concept Ladder, sequencing, explanation rules, guided lessons and the teaching self-check.
 - `references/source-processing.md`: handling slides, recordings, transcripts, readings, images and past exams.
 - `references/note-formats.md`: note structures, matrix notes, diagrams, subject-specific formats, flashcard rules.
 - `references/practice-exams.md`: question design, Bloom's levels, MCQ rules, blueprints, answer keys, rubrics.

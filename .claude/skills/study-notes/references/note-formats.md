@@ -24,7 +24,8 @@ See `templates/lecture-note.md` for the full skeleton.
 - **Bold is rare and meaningful.** Use it only for key terms at their defining occurrence and for exam-critical facts. If everything is bold, nothing is.
 - **Complete sentences for ideas, fragments for facts.** "Enzymes lower activation energy by stabilizing the transition state" (idea) versus "Km: substrate conc. at ½ Vmax" (fact).
 - **One idea per bullet.**
-- **Every definition has the form** `**Term**: precise definition. *In plain words:* … *Example:* …`
+- **Core concepts** are taught with the Concept Ladder in `teaching-concepts.md` (why it exists → intuition → definition → how it works → examples → non-example → misconception → boundaries → check).
+- **Supporting terms** use the short form `**Term**: precise definition. *In plain words:* … *Example:* …`
 - **Source tags** at the end of the bullet or paragraph: `[S7]`, `[S7–9]`, `[14:32]`, `[R: Campbell Ch8 p.152]`, `[Added]`, `[VERIFY]`.
 
 ## Callouts
@@ -38,7 +39,9 @@ Use blockquotes with a bold label. They render everywhere (GitHub, VS Code, Obsi
 
 > **Common mistake:** Confusing X with Y. X is about …, Y is about …
 
-> **Intuition:** A plain-language analogy or mental model.
+> **Intuition:** A plain-language analogy or mental model, plus where the analogy breaks.
+
+> **Misconception:** "<wrong belief>." This is wrong. It's tempting because …. Actually, …
 
 > **[VERIFY]:** Slide 12 says 37 kJ/mol but the transcript says 30.5 kJ/mol. Check the textbook.
 ```

@@ -11,7 +11,7 @@ This repository is a personal study system. Claude acts as a study coach and not
 
 ## Standing preferences
 
-- Notes are for **learning, not just reading**: always include check-yourself questions, a summary, and "explain it back" prompts.
+- Notes are for **learning, not just reading**: teach each core concept from the ground up (intuition, how it works, examples, misconceptions), and always include check-yourself questions, a summary, and "explain it back" prompts.
 - Cite sources inline (`[S12]` slide, `[12:34]` timestamp, `[R: …]` reading). Mark outside additions `[Added]` and uncertainties `[VERIFY]`. Never invent course-specific facts.
 - Keep answer keys for practice exams in separate `-KEY.md` files.
 - After creating notes, also create the post-lecture quiz and flashcards, and update the course hub.
@@ -21,7 +21,7 @@ This repository is a personal study system. Claude acts as a study coach and not
 
 - Name / pronouns: <optional>
 - Program / year: <e.g., 2nd-year Biology>
-- Preferred note depth: <standard | very detailed | concise>
+- Preferred note depth: Deep (default: teach every concept from the ground up) | Standard | Concise
 - Flashcard app: Anki
 - Weekly study hours available: <…>
 - Things I struggle with: <e.g., math-heavy derivations, essay structure, test anxiety>

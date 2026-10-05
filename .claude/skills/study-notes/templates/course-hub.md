@@ -4,6 +4,21 @@
 **Textbook:** <…> · **Course site:** <…>
 **AI policy (from syllabus):** <…>
 
+## Learner profile
+- **Preferred note depth:** <Deep (default) | Standard | Concise>
+- **Background / prerequisites I have:** <e.g., took CHEM101; no calculus yet>
+- **Things I find hard in this course:** <…>
+- **How I like things explained:** <e.g., analogies first, lots of worked examples, diagrams>
+
+## Big ideas of the course
+<!-- The 3–7 core principles the whole course is built on; each lecture note links to these -->
+1. <…>
+
+## Notation & conventions
+| Symbol / term | Meaning | Units | Notes (e.g., textbook uses a different symbol) |
+|---|---|---|---|
+| | | | |
+
 ## Assessments
 | Assessment | Date | Weight | Format | Scope | Allowed materials |
 |---|---|---|---|---|---|

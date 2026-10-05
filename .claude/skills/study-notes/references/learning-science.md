@@ -1,6 +1,6 @@
 # Learning Science Behind This Skill
 
-Every rule in `SKILL.md` traces back to one of the findings below. When you have to make a judgment call the skill doesn't cover, reason from these principles.
+Every rule in `SKILL.md` traces back to one of the findings below. When you have to make a judgment call the skill doesn't cover, reason from these principles. The research behind *how concepts are explained* (advance organizers, varied examples and non-examples, refutation of misconceptions, concreteness fading, learning by teaching) is in `teaching-concepts.md`.
 
 ## Evidence tiers at a glance
 
@@ -20,7 +20,7 @@ Dunlosky, Rawson, Marsh, Nathan & Willingham (2013), *Improving Students' Learni
 
 Dunlosky et al. judged each technique on how well it **generalizes** across four dimensions: *learning conditions* (dosage, timing), *student characteristics* (age, ability, prior knowledge), *materials* (vocabulary, texts, math, science) and *criterion tasks* (recall, comprehension, problem solving, delayed tests). The two high-utility techniques held up across all four. Their practical caveats:
 
-- **Practice testing** works best as **low-stakes**, frequent tests that require **recall rather than recognition**, with **several retrievals of each item spread out over time**, and with **feedback** after the attempt. Practice tests help even when their format differs from the final exam's.
+- **Practice testing** works best as **low-stakes**, frequent tests, with **several retrievals of each item spread out over time**, and with **feedback** after the attempt. Dunlosky et al. favored recall formats over recognition. A later meta-analysis (Adesope et al., 2017, §1) found that well-built multiple choice works very well too, so this skill uses both. Practice tests help even when their format differs from the final exam's.
 - **Distributed practice**: the review gap should grow with how far away the test is. Their rule of thumb is a lag of about **10–20% of the retention interval** (a test in 10 days: reviews about 1–2 days apart; a test in 6 months: about 3–4 weeks apart). Spacing works for vocabulary, definitions, math and even motor skills.
 - **Elaborative interrogation and self-explanation** work best when the student **already has some prior knowledge**. With no basics, "why?" questions produce guesses. Notes must teach the basics first, then prompt elaboration.
 - **Interleaving** has its strongest evidence in **math and category learning** (telling problem types or categories apart). Use it for problem practice and confusable concepts, not as a reason to shuffle everything.
@@ -37,10 +37,15 @@ Dunlosky et al. judged each technique on how well it **generalizes** across four
   - The practice tests gave **no feedback**, so retrieval itself strengthens memory. Feedback adds more on top of that.
   - **Lessons:** (1) immediate performance right after studying is a misleading signal, so test yourself the *next day*; (2) the feeling of knowing that rereading produces is an illusion; (3) repeated retrieval beats repeated reading, even though it feels worse.
 - **Karpicke & Blunt (2011, *Science*)**: retrieval practice produced about 50% better long-term retention than building concept maps. The advantage held on inference and comprehension questions, not just facts.
-- **Adesope, Trevisan & Sundararajan (2017)**, a meta-analysis of 272 effect sizes: practice tests beat restudying (g ≈ 0.5–0.6). Effects are **stronger when feedback is given, when practice format matches the final exam format, and when the format is demanding (short answer / free recall > recognition)**.
+- **Adesope, Trevisan & Sundararajan (2017)**, a meta-analysis of 272 effect sizes from 118 articles:
+  - Practice tests beat restudying (g ≈ 0.51) and beat doing nothing or filler tasks (g ≈ 0.93).
+  - Benefits appeared on **transfer** tests, not just retention tests, and were **larger when the final test came more than a day later**.
+  - **Matching** the practice format to the final exam format helped only modestly. Feedback helped only **slightly** on average, because retrieval itself does most of the work.
+  - Surprisingly, **multiple-choice practice (g ≈ 0.70) outperformed short-answer practice (g ≈ 0.48)**. Well-built MCQs with plausible distractors make you retrieve and compare, not just recognize.
+- **Butler & Roediger (2008)**: multiple-choice tests can teach the *wrong* answer, because students sometimes remember the lure they picked (the negative suggestion effect). **Feedback after the test cancels this.** Feedback is cheap insurance, especially for MCQs.
 - **Pretesting / errorful generation (Kornell, Hays & Bjork 2009; Richland, Kornell & Kao 2009)**: attempting questions *before* learning improves later learning, even when the first guesses are wrong.
 
-**Implications:** notes are question-driven. The first real quiz on a lecture is scheduled for the *next day*, not straight after reading the note. Every quiz has an answer key with *explanations*. Question formats mirror the real exam. Free-recall and short-answer questions come before multiple choice. A "pre-lecture warm-up" quiz is offered when slides are available before class.
+**Implications:** notes are question-driven. The first real quiz on a lecture is scheduled for the *next day*, not straight after reading the note. Every quiz has an answer key with *explanations*. Use a **mix of formats**: free recall and short answer (generating answers, as most university exams demand) *and* well-built multiple choice (the strongest single format in the meta-analysis), with question styles that mirror the real exam. A "pre-lecture warm-up" quiz is offered when slides are available before class.
 
 ## 2. Spacing (distributed practice)
 
@@ -158,7 +163,9 @@ The Learning Scientists (cognitive psychologists Yana Weinstein, Megan Sumeracki
 - Dunlosky et al. (2013). *Psychological Science in the Public Interest*, 14(1), 4–58. https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html
 - Roediger & Karpicke (2006). *Test-Enhanced Learning*. Psychological Science, 17(3), 249–255. https://psychology.ecu.edu/wp-content/pv-uploads/sites/216/2019/03/Roediger-Karpicke-2006.pdf
 - Karpicke & Blunt (2011). *Science*, 331. https://www.purdue.edu/newsroom/research/2011/110120KarpickeScience.html
-- Adesope, Trevisan & Sundararajan (2017). *Review of Educational Research*. https://education.wsu.edu/documents/2018/01/rethinking-use-tests.pdf/
+- Adesope, Trevisan & Sundararajan (2017). *Rethinking the Use of Tests: A Meta-Analysis of Practice Testing*. Review of Educational Research, 87(3). https://eric.ed.gov/?id=EJ1141817
+- Butler & Roediger (2008). *Feedback enhances the positive effects and reduces the negative effects of multiple-choice testing*. Memory & Cognition, 36, 604–616. https://pubmed.ncbi.nlm.nih.gov/18491500/
+- Ramirez & Beilock (2011). *Writing about testing worries boosts exam performance in the classroom*. Science, 331, 211–213. https://www.sciencedaily.com/releases/2011/01/110113141605.htm
 - Cepeda et al. (2008). *Psychological Science*. https://pubmed.ncbi.nlm.nih.gov/19076480/
 - Rohrer & Taylor (2007); interleaving overview: https://cognitiveresearchjournal.springeropen.com/articles/10.1186/s41235-017-0087-y
 - Kornell, Hays & Bjork (2009); Richland, Kornell & Kao (2009): https://learninglab.uchicago.edu/Pre-Testing_files/RichlandKornellKao.pdf
